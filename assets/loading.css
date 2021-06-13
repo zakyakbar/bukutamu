@@ -1,0 +1,65 @@
+body {
+	background: #ffa500;
+	font-family: sans-serif;
+}
+
+
+.load-text {
+	margin: 50px 0 50px 50px;
+
+}
+
+.text-load {
+	position: relative;
+	color: rgba(0, 0, 0, .3);
+	font-size: 30px;
+	border-bottom: 2px solid #ffffff;
+	padding-bottom: 10px;
+	font-weight: 600;
+}
+
+.text-load:before {
+	content: attr(data-text);
+	position: absolute;
+	overflow: hidden;
+	max-width: 15em;
+	white-space: nowrap;
+	color: #fff;
+	animation: loading 2.7s linear;
+
+}
+
+@keyframes loading {
+	0% {
+		max-width: 0;
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	.load-text {
+		margin: 10% 500px;
+
+	}
+
+	.text-load {
+		position: relative;
+		color: rgba(0, 0, 0, .3);
+		font-size: 67px;
+		border-bottom: 2px solid #ffffff;
+		padding-bottom: 10px;
+		font-weight: 600;
+	}
+
+	.text-load:before {
+		content: attr(data-text);
+		position: absolute;
+		overflow: hidden;
+		max-width: 15em;
+		white-space: nowrap;
+		color: #fff;
+		animation: loading 2.7s linear;
+
+	}
+
+}
